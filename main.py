@@ -90,6 +90,30 @@ while running:
         running = False
 
 
+#PARTE 1
+# 1) Si se utilizó ISO-8859-1 encode. Porque se tenía que pasar a bytes. Se consideró utf-8 pero nos ocurrió que ingresamos una key
+#  donde había un valor no perteneciente al ascii code y fallo en el encode.
+# Para cifrar el texto con este algoritmo se necesitan los bytes en si para eso sirve .encode(encoding)
+# 2) Se usó EAX mode porque soporta una longitud de texto arbitrario y nos provee autenticación y cifrado.
+# 3) Los parámetros fueron:
+# El modo (EAX)
+# El key para descifrar
+# El nonce (valor random único en la relación mensaje/key)
+# El texto a descifrar
+
+#PARTE 2
+# 1) Se usó EAX mode porque soporta una longitud de texto arbitrario y nos provee autenticación y cifrado. (Lo mismo que para el de arriba)
+# 2) Los parámetros fueron:
+# El modo (EAX)
+# El key para descifrar
+# El nonce (valor random único en la relación mensaje/key)
+# El texto a descifrar
+# 3) La key. Y el nonce son los que nos permiten la validación del cipher sin su uso no se podría pasar la autenticación.
+
+#LINK YOUTUBE
+#https://www.youtube.com/watch?v=T10qBMww_gc
+
+
 
 
 
